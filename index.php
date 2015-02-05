@@ -14,17 +14,26 @@
 	</head>
 
 	<body>
+		<?php include('header.php'); ?>
 
-                <?php include('header.php'); ?>
 
-		<?php 
-		 	if (isset($_GET['action'])) {
-		    	include($_GET['action'] . '.php');
-		  	}
-		  	else {
-				include('home.php');
-			}
-		?>
+		<div id="background_contenu">
+			<div id="contenu">
+				<?php 
+		 			if (isset($_GET['action'])) {
+		    			include($_GET['action'] . '.php');
+		  			}
+		  			else {
+						include('home.php');
+					}
+				?>
+        	</div>
+        </div>
         
+       <?php include('footer.php'); ?>
+       
+       		<div id="footer">
+            </div>
+       
 	</body>
 </html>
