@@ -1,44 +1,18 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Index</title>
-<style type="text/css">
-body,td,th {
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-	color: #993365;
-}
-</style>
-</head>
 
-<body>
-<p align="left">&nbsp;</p>
-<table width="100%" border="0">
-  <tbody>
-    <tr>
-      <td width="172" height="166"><a href="index.html"><img src="Images/logo.jpg" width="172" height="162" alt=""/></a></td>
-      <td width="941" align="left" valign="middle"><p><strong><font size="10"><em>Cercles</em></font></strong></p>
-      <p><strong><em>Réseau Social de proximité au service des centres d'intérets</em></strong></p></td>
-      <td width="77" align="right" valign="bottom"><a href="index identifié.html">
-        <input name="s'identifier" type="button" id="s'identifier" value="S'identifier">
-      </a></td>
-      <td width="70" align="right" valign="bottom"><input type="button" name="s'inscrire" id="s'inscrire" value="S'inscrire"></td>
-    </tr>
-  </tbody>
-</table>
+<a href="/index.php?action=inscription">Aller à l'inscription</a>
 
-<hr width="100%" noshade>
+
 <p><strong>Trouver un cercle dans votre ville</strong></p>
 <p>
   <input name="recherche cercle" type="search" id="recherche cercle" autocomplete="off" value="Saisir la ville, le départemet, la région, le pays" size="70">
   
 <a href="résultat recherche cercle.html"><input type="button" name="rechercher" id="rechercher" value="Rechercher"></a></p>
-<p>&nbsp;</p>
-<p><strong>Cercles,</strong> un v&eacute;ritable r&eacute;seau social de  proximit&eacute; au service des centres d&rsquo;int&eacute;r&ecirc;t. </p>
+<p></p>
+<p><strong>Cercles,</strong> un véritable réseau social de  proximité au service des centres d'intérêt. </p>
 <p>Gratuit</p>
 <p>Accessible à tous</p>
 <p>Partout dans le monde</p>
-<p>&nbsp;</p>
+<p></p>
 <h2><strong>Derni&egrave;re  cr&eacute;ation de cercle&nbsp;: </strong></h2>
 <p>[VIGNETTE CERCLE]</p>
 <p>&nbsp;</p>
@@ -71,5 +45,3 @@ body,td,th {
 </ul>
 <p>&nbsp;</p>
 <p><a href="mailto:Contact@XXX.com">Contact</a></p>
-</body>
-</html>

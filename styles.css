@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+html {
+	padding: 0;
+}
+
+body {
+	margin: 0;
+}
+
+.header-container {
+	background: rgb(16, 0, 255);
+	margin: 0;
+}
