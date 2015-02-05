@@ -1,3 +1,13 @@
+<?php
+  $username = "fherbert";
+  $password = "penelope49";
+  $hostname = "fr.anco.is"; 
+  $db_name  = "cercles";
+
+  //connection to the database
+  $mysql = mysqli_connect($hostname, $username, $password) or die("Unable to connect to MySQL");
+  mysqli_select_db($mysql, $db_name) or die("Could not select DB");
+?>
 <!doctype html>
 <html>
   <head>

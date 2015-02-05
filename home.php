@@ -1,7 +1,7 @@
 <p><strong>Trouver un cercle près de chez vous</strong></p>
 <p>
   <input name="recherche cercle" type="search" id="recherche cercle" autocomplete="off" value="Saisir la ville, le départemet, la région, le pays" size="70">
-  
+
 <a href="résultat recherche cercle.html"><input type="button" name="rechercher" id="rechercher" value="Rechercher"></a></p>
 <p></p>
 <p><strong>Cercles,</strong> un véritable réseau social de  proximité au service des centres d'intérêt. </p>
@@ -10,7 +10,24 @@
 <p>Partout dans le monde</p>
 <p></p>
 <h2><strong>Dernière  création de cercle : </strong></h2>
-<p>[VIGNETTE CERCLE]</p>
+
+
+<?php
+  //execute the SQL query and return records
+  $result = mysqli_query($mysql, "SELECT * FROM cercles ORDER BY creation DESC LIMIT 1");
+  
+  //fetch tha data from the database
+  //while ($row = mysql_fetch_array($result)) {
+  //  echo "ID:".$row{'id'}." Name:".$row{'model'}."".$row{'year'}."<br>";
+  //}
+
+  $dernier_cercle = mysqli_fetch_array($result);
+?>
+
+<p>
+  <?php echo($dernier_cercle{'nom_cercle'}); ?> créé le <?php echo($dernier_cercle{'creation'}); ?>.
+</p>
+
 <p></p>
 <h2><strong>Comment ça  marche? </strong></h2>
 <p>  Nouvel arrivant dans une ville,  besoin de rencontrer des personnes autour d'un thème particulier de façon  ponctuelle ou durable, pas loin de chez vous, pour partager une passion,  agrandir son réseau d'amis, <strong><em>Cercles</em></strong> va vous y aider! </p>

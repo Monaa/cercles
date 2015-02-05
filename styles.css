@@ -16,7 +16,7 @@ html, body {
 	}
 
 #contenu {
-	background: teal;
+/*	background: teal;*/
 	padding-left: 10em;
 	padding-right: 10em;
 	padding-top: 2em;
@@ -25,7 +25,7 @@ html, body {
 }
 
 #background_contenu {
-	background: teal;
+	/*background: teal;*/
 	margin-left: 0em;
 	margin-right: 0em;
 	margin-top: 0em;
@@ -34,7 +34,7 @@ html, body {
 }
 
 #footer {
-	background: teal;
+	/*background: teal;*/
 	padding-left: 10em;
 	padding-right: 10em;
 	padding-top: 2em;
