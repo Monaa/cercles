@@ -13,16 +13,16 @@ body,td,th {
 
 <body>
 <p>Créer un cercle</p>
-<p>&nbsp;</p>
+<p></p>
 <p>NOM DU CERCLE </p>
 <p>
   <input name="Nom du cercle" type="text" id="Nom du cercle" maxlength="20">
 </p>
-<p>&nbsp;</p>
+<p></p>
 <p>CATEGORIE DU CERCLE</p>
 <p><em>quand je sélectionne la catégorie, la photo de la catégorie apparait</em></p>
 <p>Ajouter une PHOTO (<em>(par défaut celle de la catégorie, sinon celle ajoutée par le créateur du cercle)</em>)</p>
-<p>&nbsp; </p>
+<p></p>
 <p>VILLE 
   <input name="Nom du cercle2" type="text" id="Nom du cercle2" maxlength="20">
 </p>
