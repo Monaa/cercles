@@ -23,7 +23,8 @@
     
     <div id="background_contenu">
       <div id="contenu">
-        <?php 
+        <p>
+          <?php 
           if (isset($_GET['action'])) {
             include($_GET['action'] . '.php');
           }
@@ -31,8 +32,14 @@
             include('home.php');
           }
         ?>
+        </p>
+        
+        <p></p>
+        
       </div>
     </div>
+ 
+    
     
     <div id="footer"> 
       <?php include('footer.php'); ?>

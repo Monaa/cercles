@@ -6,7 +6,7 @@
       <td width="941" align="left" valign="middle"><h1><strong><font size="10" >Cercles</font></strong>      </h1>
         <h1><strong><font size="5" >Réseau Social de proximité au service des centres d'intérets</font></strong></h1></td>
       <td width="77" align="right" valign="bottom">
-      <a href="/?action=index_identifies"><input type="button" name="s'identifier" id="s'identifier" value="S'identifier" >            
+      <a href="/?action=home_identifies"><input type="button" name="s'identifier" id="s'identifier" value="S'identifier" >            
       </a>
       </td>
       <td width="77" align="left" valign="bottom">
