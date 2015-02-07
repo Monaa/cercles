@@ -36,7 +36,7 @@
   <br />
 
   <label for="commentaire">Commentaire</label>
-  <textarea rows="8" cols="50" id="commentaire" name="commentaire"></textarea>
+  <textarea rows="8" cols="60" id="commentaire" name="commentaire"></textarea>
   <br />
 
   <input type="submit" />
