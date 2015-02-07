@@ -1,14 +1,13 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>footer</title>
-</head>
-
-<body>
-
 <p><a href="mailto:Contact@XXX.com">Contact</a></p>
 
-
-</body>
-</html>
+<p><strong>Les catégories  de cercles</strong></p>
+<ul>
+  <li>Activtés mauelles</li>
+  <li>Activités artistiques</li>
+  <li>Nature</li>
+  <li>Société</li>
+  <li>Sport</li>
+  <li>Santé</li>
+  <li>Famille</li>
+  <li>Autres</li>
+</ul>
