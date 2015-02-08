@@ -7,6 +7,7 @@
   //connection to the database
   $mysql = mysqli_connect($hostname, $username, $password) or die("Unable to connect to MySQL");
   mysqli_select_db($mysql, $db_name) or die("Could not select DB");
+  mysqli_query($mysql, "SET NAMES utf8");
 ?>
 <!doctype html>
 <html>
@@ -20,7 +21,8 @@
 
   <body>
   	<?php include('header.php'); ?>
-    
+    <?php include('menu.php'); ?>
+
     <div id="background_contenu">
       <div id="contenu">
         <p>
@@ -33,8 +35,6 @@
           }
         ?>
         </p>
-        
-        <p></p>
         
       </div>
     </div>

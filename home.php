@@ -1,20 +1,15 @@
-<a  class="btn btn-default" href="http://google.com">Test lien</a>
+<?php include('recherche_cercle.php'); ?>
 
-
-<h2>Trouver un cercle près de chez vous</h2>
-<p>
-  <input name="recherche cercle" type="search" id="recherche cercle" autocomplete="off" value="Saisir la ville, le départemet, la région, le pays" size="70">
-
-	<a  class="btn btn-default" href="/?action=resultat_recherche_cercle">Rechercher</a>       
-
-
-<p>Cercles, un véritable réseau social de  proximité au service des centres d'intérêt. </p>
+<p></p>
+<h3>Cercles, réseau social de  proximité au service des centres d'intérêt. </h3>
 
 <ul>
-  	<li>Gratuit</li>
+  <li>Gratuit</li>
 	<li>Accessible à tous</li>
 	<li>Partout dans le monde</li>
 </ul>
+
+
 <ul>
     <li> Nouvel arrivant dans une ville? </li>
     <li>Envie de partager une passion ? </li>
