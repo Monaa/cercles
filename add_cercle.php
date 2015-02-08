@@ -1,18 +1,19 @@
-<!--
+
 <?php
   if (isset($_POST['nom'])) { ?>
     <p>Nom envoyé: <?php echo($_POST['nom']); ?></p>
     <p>id_ville envoyé: <?php echo($_POST['id_ville']); ?></p>
-    <p>Commentaire envoyé: <?php echo($_POST['commentaire']); ?></p>
+    <p>catégorie sélectionnée: <?php echo($_POST['nom']); ?></p>
+<p>Commentaire envoyé: <?php echo($_POST['commentaire']); ?></p>
 
     <?php 
     
-    $query = "INSERT INTO cercles (nom_cercle, id_categorie, id_ville, commentaire, creation) VALUES ('".$_POST['nom']."', 1, ".$_POST['id_ville'].", '".mysqli_escape_string($mysql, $_POST['commentaire'])."', NOW())";
-
+    $query = "INSERT INTO cercles (nom_cercle, id_ville, id_categorie, commentaire, creation) VALUES ('".$_POST['nom']."', ".$_POST['id_ville'].", '".$_POST['id_categorie']."', '".mysqli_escape_string($mysql, $_POST['commentaire'])."', NOW())";
+		
   echo($query);
     mysqli_query($mysql, $query) or die(mysqli_error($mysql));
   } 
-?>-->
+?>
 
 <h1>Créer un cercle</h1>
 
@@ -38,6 +39,22 @@
     ?>
     </select>
   </p>
+  
+  
+  
+<label for "id_categorie">Catégorie</label></p> 
+<select id="id_categorie" name="id_categorie">
+	<?php 
+	$noms = mysqli_query($mysql, "SELECT id, nom FROM cercles.categories");
+	while ($nom = mysqli_fetch_array($noms)) { ?>
+    <option value="<?php echo($nom{'id'}); ?>"><?php echo($nom{'nom'}); ?></option> <?php }
+	?>
+    </select>
+    
+		
+  
+  
+  
   <p><br />
     
     <label for="commentaire">Description</label></p>
