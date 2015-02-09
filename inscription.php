@@ -32,8 +32,6 @@
       <label for="prenom">Prénom</label>
       <input id="prenom" name="prenom" />
       <br />
-  
-  	  </p>
       <br />
       <label for="email">e-mail</label> 
       <input id="email" name="email" />
@@ -43,8 +41,13 @@
       <input id="mdp" name="mdp" />
       <br />
       <br />
+      <label for="cmdp">Confirmation du mot de passe</label>
+      <input id="cmdp" name="cmdp" />
+      <br />
+      <br />
+
       <input type="submit" />
    	  </p>
- 
+
 </form>
 
