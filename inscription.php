@@ -1,19 +1,19 @@
 <?php
-  if (isset($_POST['nom'])) { ?>
-    <p>Nom envoyé: <?php echo($_POST['nom']); ?></p>
-    <p>prénom envoyé: <?php echo($_POST['prenom']); ?></p>
+  if (isset($_POST['pseudo'])) { ?>
+    <p>Pseudo envoyé: <?php echo($_POST['pseudo']); ?></p>
     <p>e-mail envoyé: <?php echo($_POST['email']); ?></p>
     <p>mot de passe envoyé: <?php echo($_POST['mdp']); ?></p>
     
     <?php 
     try { 
+	  // hachage du mot de passe
       $pass_hache = sha1 ($_POST['mdp']);
 	
-      $req = $db->prepare ('INSERT INTO utilisateurs (nom, prenom, email, mdp, creation) VALUES (:nom, :prenom, :email, :mdp, NOW())');
+	  // insertion
+      $req = $db->prepare ('INSERT INTO utilisateurs (pseudo, email, mdp, creation) VALUES (:pseudo, :email, :mdp, NOW())');
 
       $req->execute (array(		
-        ':nom'    => $_POST['nom'] ,
-        ':prenom' => $_POST['prenom'] ,
+	    ':pseudo'    => $_POST['pseudo'] ,
         ':email'  => $_POST['email'] ,
         ':mdp'    => $pass_hache
       ));
@@ -33,12 +33,8 @@
     
  
       <p>
-      <label for="nom">Nom</label>
-      <input id="nom" name="nom" />
-      <br />
-      <br />
-      <label for="prenom">Prénom</label>
-      <input id="prenom" name="prenom" />
+      <label for="pseudo">Pseudo</label>
+      <input id="pseudo" name="pseudo" />
       <br />
       <br />
       <label for="email">e-mail</label> 
@@ -47,7 +43,7 @@
       <br />
       <label for="password">Mot de passe</label> 
       <input type="password" name="mdp" />
-      <input id="mdp" name="mdp" label="Mot de passe" />  
+
       <br />
       <br />
       <label for="cmdp">Confirmation du mot de passe</label>
