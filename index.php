@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php
   $username = "fherbert";
   $password = "penelope49";
@@ -16,6 +18,7 @@
   $db  = new PDO( $dns, $username, $password );
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
+
 <!doctype html>
 <html>
   <head>
@@ -27,11 +30,22 @@
   </head>
 
   <body>
-  	<?php include('header.php'); ?>
-    <?php include('menu.php'); ?>
+  
+  
+<?php include('header.php'); ?>
 
-    <div id="background_contenu">
-      <div id="contenu">
+<?php include('menu.php'); ?>
+
+<?php
+	
+	if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']));
+	{
+		 echo 'Bonjour'; //$_SESSION['pseudo'];
+	}
+ ?>
+
+<div id="background_contenu">
+    <div id="contenu">
         <p>
           <?php 
           if (isset($_GET['action'])) {
@@ -41,16 +55,18 @@
             include('home.php');
           }
         ?>
-        </p>
         
+        
+      </p>
       </div>
     </div>
- 
+     
+
     
     
-    <div id="footer"> 
-      <?php include('footer.php'); ?>
+    <div id="footer">
+      <?php include('footer.php'); ?>  
     </div>
 
-  </body>
+</body>
 </html>
