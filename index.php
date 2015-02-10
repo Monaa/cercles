@@ -1,6 +1,6 @@
-<?php session_start(); ?>
+<?php 
+  session_start(); 
 
-<?php
   $username = "fherbert";
   $password = "penelope49";
   $hostname = "fr.anco.is"; 
@@ -17,9 +17,7 @@
   $dns = 'mysql:host=fr.anco.is;dbname=cercles';
   $db  = new PDO( $dns, $username, $password );
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>
-
-<!doctype html>
+?><!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -30,43 +28,39 @@
   </head>
 
   <body>
-  
-  
-<?php include('header.php'); ?>
-
-<?php include('menu.php'); ?>
-
-<?php
-	
-	if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']));
-	{
-		 echo 'Bonjour'; //$_SESSION['pseudo'];
-	}
- ?>
-
-<div id="background_contenu">
-    <div id="contenu">
-        <p>
-          <?php 
-          if (isset($_GET['action'])) {
-            include($_GET['action'] . '.php');
-          }
-          else {
-            include('home.php');
-          }
-        ?>
-        
-        
-      </p>
-      </div>
-    </div>
-     
-
     
+	<?php include('header.php'); ?>
     
-    <div id="footer">
-      <?php include('footer.php'); ?>  
-    </div>
+    <?php include('menu.php'); ?>
+    
+    <?php
+        
+        if (isset($_SESSION['pseudo']))
+        {
+             echo 'Bonjour ' . $_SESSION['pseudo'];
+        }
+     ?>
+    
+    <div id="background_contenu">
+        <div id="contenu">
+            <p>
+              <?php 
+              if (isset($_GET['action'])) {
+                include($_GET['action'] . '.php');
+              }
+              else {
+                include('home.php');
+              }
+            ?>
+            
+            
+          </p>
+          </div>
+        </div>
+        
+        <div id="footer">
+          <?php include('footer.php'); ?>  
+        </div>
 
-</body>
+	</body>
 </html>

@@ -1,43 +1,38 @@
+<?php
+    // hachage du mdp		
+    $pass_hache = sha1 ($_POST['mdp']);
+    $pseudo     = $_POST['pseudo'] ;
+
+    //vérification des identifiants
+    $req = $db->prepare ('SELECT id, pseudo FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
     
-	<?php
-		// hachage du mdp		
-		$pass_hache = sha1 ($_POST['mdp']);
-		
-		$pseudo = $_POST['pseudo'] ;
-	
-		//vérification des identifiants
-		$req = $db->prepare ('SELECT id FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
-		
-		$req->execute(array(
-			':pseudo' => $pseudo,
-			':mdp' => $pass_hache
-		
-		));
-		
-	
+    $req->execute(array(
+        ':pseudo' =>  $pseudo,
+        ':mdp' =>     $pass_hache    
+    ));
+    
 	$resultat = $req->fetch();
-	
+
 	if (!$resultat)
 	{
 		echo 'Mauvais identifiant ou mot de passe';
 	}
 	else 
-	{}
-  
+	{
+	  $_SESSION['pseudo'] = $resultat['pseudo'];	
+	  // rajouter id dans session
+	}
+
 ?>
 
-    
-	<?php include ('recherche_cercle.php'); ?>
+<?php include ('recherche_cercle.php'); ?>
 
 <h2>Mes cercles </h2>
-	<?php include ('mes_cercles.php'); ?>
+<?php include ('mes_cercles.php'); ?>
 
 <h2>Dernière création de cercle</h2>
-  	<?php include('vignette_derniere_creation_de_cercle.php'); ?>
-
+<?php include('vignette_derniere_creation_de_cercle.php'); ?>
 
 <h2>Dernière  création de cercle près de chez moi</h2>
 <p>[VIGNETTE CERCLE] (10 km)</p>
-
-
-		 
+ 
