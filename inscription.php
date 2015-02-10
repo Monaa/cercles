@@ -2,25 +2,30 @@
   if (isset($_POST['nom'])) { ?>
     <p>Nom envoyé: <?php echo($_POST['nom']); ?></p>
     <p>prénom envoyé: <?php echo($_POST['prenom']); ?></p>
-	<p>e-mail envoyé: <?php echo($_POST['email']); ?></p>
+    <p>e-mail envoyé: <?php echo($_POST['email']); ?></p>
     <p>mot de passe envoyé: <?php echo($_POST['mdp']); ?></p>
-
     
-<?php 
-    $pass_hache = sha1 ($_POST['mdp']);
+    <?php 
+    try { 
+      $pass_hache = sha1 ($_POST['mdp']);
 	
-    $req = $mysql->prepare ('INSERT INTO cercles.utilisateurs (nom, prenom, email, mdp, creation) VALUES (:nom, :prenom, :email, :mdp, NOW ())'
+      $req = $db->prepare ('INSERT INTO utilisateurs (nom, prenom, email, mdp, creation) VALUES (:nom, :prenom, :email, :mdp, NOW())');
 
-	$req->execute (array(		
-		'nom' => $nom ,
-		'prenom' => $prenom ,
-		'email' => $email ,
-		'mdp' => $pass_hache)) ;
-		
+      $req->execute (array(		
+        ':nom'    => $_POST['nom'] ,
+        ':prenom' => $_POST['prenom'] ,
+        ':email'  => $_POST['email'] ,
+        ':mdp'    => $pass_hache
+      ));
+
+    } catch( Exception $e ){
+      echo 'Erreur de requête : ', $e->getMessage();
+    }  
+  }
 ?>
-    
-    
-    
+
+
+
 <h1>Formulaire d'inscription</h1>
 
 <form method="post" action="/index.php?action=inscription">
