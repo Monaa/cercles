@@ -3,21 +3,18 @@
     <p>Nom envoyé: <?php echo($_POST['nom']); ?></p>
     <p>prénom envoyé: <?php echo($_POST['prenom']); ?></p>
 	<p>e-mail envoyé: <?php echo($_POST['email']); ?></p>
-    <p>mot de passe envoyé: <?php echo($_POST['mdp']); ?></p>
+        <p>mot de passe envoyé: <?php echo($_POST['mdp']); ?></p>
 
     
 <?php 
-    $pass_hache = sha1 ($_POST['mdp']);
-	
-    $req = $mysql->prepare ('INSERT INTO cercles.utilisateurs (nom, prenom, email, mdp, creation) VALUES (:nom, :prenom, :email, :mdp, NOW ())'
-
-	$req->execute (array(		
-		'nom' => $nom ,
-		'prenom' => $prenom ,
-		'email' => $email ,
-		'mdp' => $pass_hache)) ;
+    
+    $query = "INSERT INTO cercles.utilisateurs (nom, prenom, email, mdp, creation) VALUES ('".$_POST['nom']."', '".$_POST['prenom']."', '".$_POST['email']."', '".$_POST['mdp']."', NOW())";
 		
+  echo($query);
+    mysqli_query($mysql, $query) or die(mysqli_error($mysql));
+  } 
 ?>
+
     
     
     
@@ -40,9 +37,8 @@
       <input id="email" name="email" />
       <br />
       <br />
-      <label for="password">Mot de passe</label> 
-      <input type="password" name="mdp" />
-      <input id="mdp" name="mdp" label="Mot de passe" />  
+      <label for="mdp">Mot de passe</label>
+      <input id="mdp" name="mdp" />
       <br />
       <br />
       <label for="cmdp">Confirmation du mot de passe</label>
