@@ -8,7 +8,8 @@
         if (isset($_SESSION['pseudo']))
         {
              echo 'Bonjour ' . $_SESSION['pseudo'];
-		}
+        }
+        else {
     ?>
 </p>
   <div id="#boutons">    		
@@ -18,3 +19,5 @@
   </div>       
 
 </div>
+
+<?php } ?>

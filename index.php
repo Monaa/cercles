@@ -17,6 +17,35 @@
   $dns = 'mysql:host=fr.anco.is;dbname=cercles';
   $db  = new PDO( $dns, $username, $password );
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+  # On teste la présence d'un pseudo et d'un mdp dans les paramètres du post
+  # s'il n'y en a pas, alors ça veut dire qu'on n'est pas dans un retour de formulaire d'authentification
+  if (isset($_POST['pseudo']) && isset($_POST['mdp'])) {
+    // hachage du mdp		
+    $pass_hache = sha1 ($_POST['mdp']);
+    $pseudo     = $_POST['pseudo'] ;
+
+    //vérification des identifiants
+    $req = $db->prepare ('SELECT id, pseudo FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
+
+    $req->execute(array(
+      ':pseudo' =>  $pseudo,
+      ':mdp' =>     $pass_hache    
+    ));
+
+    $resultat = $req->fetch();
+
+    if (!$resultat)
+    {
+      echo 'Mauvais identifiant ou mot de passe';
+    }
+    else 
+    {
+      $_SESSION['pseudo'] = $resultat['pseudo'];	
+    }
+  }
+
 ?><!doctype html>
 <html>
   <head>
