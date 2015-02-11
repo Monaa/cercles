@@ -1,30 +1,3 @@
-<?php
-    // hachage du mdp		
-    $pass_hache = sha1 ($_POST['mdp']);
-    $pseudo     = $_POST['pseudo'] ;
-
-    //vérification des identifiants
-    $req = $db->prepare ('SELECT id, pseudo FROM utilisateurs WHERE pseudo = :pseudo AND mdp = :mdp');
-    
-    $req->execute(array(
-        ':pseudo' =>  $pseudo,
-        ':mdp' =>     $pass_hache    
-    ));
-    
-	$resultat = $req->fetch();
-
-	if (!$resultat)
-	{
-		echo 'Mauvais identifiant ou mot de passe';
-	}
-	else 
-	{
-	  $_SESSION['pseudo'] = $resultat['pseudo'];	
-	  // rajouter id dans session
-	}
-
-?>
-
 <?php include ('recherche_cercle.php'); ?>
 
 <h2>Mes cercles </h2>
