@@ -1,6 +1,6 @@
 <?php
   if (!isset($cercle_utilisateur)) {
-    $res = mysqli_query($mysql, "SELECT * FROM cercles.cercles_utilisateurs where id_utilisateur=2");
+    $res = mysqli_query($mysql, "SELECT * FROM cercles.cercles_utilisateurs where id_utilisateur = :id_utilisateur");
     $dernier_cercle = mysqli_fetch_array($res);
   }
 ?>

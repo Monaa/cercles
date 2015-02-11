@@ -42,7 +42,8 @@
     }
     else 
     {
-      $_SESSION['pseudo'] = $resultat['pseudo'];	
+      $_SESSION['pseudo']         = $resultat['pseudo'];	
+      $_SESSION['id_utilisateur'] = $resultat['id'];
     }
   }
 
