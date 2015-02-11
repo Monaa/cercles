@@ -22,6 +22,6 @@
   </div>
 
   <div class="form-group">
-      <input type="submit" value="Allez, zou!" class="btn btn-success btn-lg" />
+      <input type="submit" value="S'identifier" class="btn default" />
   </div>
 </form>

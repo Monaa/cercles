@@ -32,27 +32,29 @@
   				<!-- L'action est facultative quand le formulaire est traité par le même script PHP -->
     
  
-      <p>
+  <div class="form-group">
       <label for="pseudo">Pseudo</label>
-      <input id="pseudo" name="pseudo" />
-      <br />
-      <br />
+      <input id="pseudo" name="pseudo" class="form-control" />
+  </div>
+  
+  <div class="form-group">
       <label for="email">e-mail</label> 
-      <input id="email" name="email" />
-      <br />
-      <br />
-      <label for="password">Mot de passe</label> 
-      <input type="password" name="mdp" />
+      <input id="email" name="email" class="form-control"/>
+  </div>
 
-      <br />
-      <br />
+  <div class="form-group">
+      <label for="mdp">Mot de passe</label> 
+      <input id="mdp" type="password" name="mdp" class="form-control"/>
+  </div>
+
+  <div class="form-group">
       <label for="cmdp">Confirmation du mot de passe</label>
-      <input id="cmdp" name="cmdp" />
-      <br />
-      <br />
-
-      <input type="submit" />
-   	  </p>
+      <input id="cmdp" type="password" name="cmdp" class="form-control"/>
+  </div>
+  
+  <div class="form-group">
+      <input type="submit" value="S'inscrire" class="btn btn-default" />
+  </div>
 
 </form>
 

@@ -1,7 +1,12 @@
 
 <?php
   if (!isset($dernier_cercle)) {
-    $res = mysqli_query($mysql, "SELECT * FROM cercles INNER JOIN categories ON cercles.id_categorie = categories.id ORDER BY creation DESC LIMIT 1");
+    $res = mysqli_query($mysql, 
+		"SELECT * FROM cercles 
+		INNER JOIN categories ON cercles.
+		id_categorie = categories.id 
+		ORDER BY creation DESC LIMIT 1");
+		
     $dernier_cercle = mysqli_fetch_array($res);
   }
 ?>

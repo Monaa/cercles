@@ -61,17 +61,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link href="/styles.css" type="text/css" rel="stylesheet">
 
-    <style>
-      .btn-success {
-        background: pink;
-      }
-    </style>
   </head>
 
   <body>
     <?php include('header.php'); ?>
   
-    <?php //include('menu.php'); ?>
+
+  <?php
+    if (isset($_SESSION['pseudo'])) {
+      include('menu.php');
+    }
+  ?>
 
     
     <div id="background_contenu">
