@@ -46,19 +46,29 @@
     }
   }
 
+  if ($_GET['action'] == 'deconnexion') {
+    session_unset(); 
+    session_destroy();
+  }
+
 ?><!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Index</title>
     
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link href="/styles.css" type="text/css" rel="stylesheet">
+
+    <style>
+      .btn-success {
+        background: pink;
+      }
+    </style>
   </head>
 
   <body>
-    
-	<?php include('header.php'); ?>
+    <?php include('header.php'); ?>
   
     <?php //include('menu.php'); ?>
 
