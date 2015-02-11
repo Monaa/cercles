@@ -30,16 +30,9 @@
   <body>
     
 	<?php include('header.php'); ?>
-    
-    <?php include('menu.php'); ?>
-    
-    <?php
-        
-        if (isset($_SESSION['pseudo']))
-        {
-             echo 'Bonjour ' . $_SESSION['pseudo'];
-        }
-     ?>
+  
+    <?php //include('menu.php'); ?>
+
     
     <div id="background_contenu">
         <div id="contenu">
