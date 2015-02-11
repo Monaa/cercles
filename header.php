@@ -7,7 +7,8 @@
         
         if (isset($_SESSION['pseudo']))
         {
-             echo 'Bonjour ' . $_SESSION['pseudo'];
+          echo 'Bonjour ' . $_SESSION['pseudo'];
+          echo '<a  class="btn btn-default" href="/?action=deconnexion">Déconnexion</a>';
         }
         else {
     ?>
@@ -15,7 +16,6 @@
   <div id="#boutons">    		
     <a  class="btn btn-default" href="/?action=identification">S'identifier</a>       
     <a  class="btn btn-default" href="/?action=inscription">S'inscrire</a>
-    <a  class="btn btn-default" href="/?action=deconnexion">Déconnexion</a>
   </div>       
 
 </div>
