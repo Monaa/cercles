@@ -1,15 +1,39 @@
+
+
+
+
 <?php
-  if (!isset($cercle_utilisateur)) {
-    $res = mysqli_query($mysql, "SELECT * FROM cercles.cercles_utilisateurs where id_utilisateur=2");
+  if (!isset($dernier_cercle)) {
+    $res = mysqli_query($mysql, 
+		"SELECT * FROM cercles 
+		INNER JOIN categories ON cercles.
+		id_categorie = categories.id 
+		ORDER BY creation DESC LIMIT 1");
+		
     $dernier_cercle = mysqli_fetch_array($res);
   }
 ?>
 
-<div class="vignette_cercle_utilisateur">
-  <h1><?php echo($cercles_utilisateurs{'nom_cercle'}); ?></h1>
+  <h1><img src="<?php echo($dernier_cercle{'url'}); ?>"  alt=""/><?php echo($dernier_cercle{'nom_cercle'}); ?></h1>
   <p></p>
-  <p><?php echo($cercle_utilisateur{'commentaire'}); ?></p> 
-  <p>créé le <?php echo($cercle_utilisateur{'creation'}); ?>. </p>
-</div>
+  <p><?php echo($dernier_cercle{'commentaire'}); ?></p> 
+  <p>créé le <?php echo($dernier_cercle{'creation'}); ?>. </p>
 
-<h1> <?php echo($cercle_utilisateur_principal{'id_cercle_principal'}); ?> </h1> 
+
+
+<!--
+
+<?php  /*
+	$dernier_cercle
+	$populaire
+	$recherche
+	$utilisateur
+	$creation_geographique
+*/?>
+
+
+
+
+
+
+-->
