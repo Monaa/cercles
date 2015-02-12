@@ -8,18 +8,22 @@
 
  <?php
   }
-   $req = $db->prepare ('INSERT INTO cercles (nom_cercle, id_ville, id_categorie, commentaire, creation) VALUES  (:nom_cercle, :id_ville, :id_categorie, :commentaire, :creation)');
+  # On teste la présence de 'nom' dans le $_POST, on aurait pu faire le même test sur tous les champs du formulaire
+  # l'objectif étant ici de vérifier qu'on est dans le cadre d'une soumission de formulaire d'ajout de cercle, et pas simplement en mode affichage du formulaire
+  if (isset($_POST['nom'])) {
+   $req = $db->prepare ('INSERT INTO cercles (nom_cercle, id_ville, id_categorie, commentaire, creation) VALUES  (:nom_cercle, :id_ville, :id_categorie, :commentaire, NOW())');
 
     $req->execute(array(
       ':nom_cercle' =>  	$_POST['nom'],
       ':id_ville' =>     	$_POST['id_ville'],
 	  ':id_categorie' =>    $_POST['id_categorie'],
-	  ':commentaire' => 	$_POST['commentaire'],
-	  ':creation' => 		$_POST['creation']
+	  ':commentaire' => 	$_POST['commentaire']
     ));
-	
-    $resultat = $req->fetch();
 
+    # Il ne faut pas mettre 'fetch' après un INSERT, parce que fetch va chercher une ligne de résultats
+    # pour l'objet $req, mais vu que c'est un INSERT ça ne peut pas retourner de résultats de toute facon   
+    #$resultat = $req->fetch();
+  }
 ?>
 
 <h1>Créer un cercle</h1>
