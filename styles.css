@@ -14,6 +14,8 @@ p	{color: rgba(62,61,64,1.00); font-size: 15px;}
 li 	{color: rgba(62,61,64,1.00); font-size: 15px;}
 
 
+
+
 #header {
 	background-color: rgba(233,219,242,1.00);
 	color: rgba(146,222,18,1.00);
@@ -31,6 +33,7 @@ li 	{color: rgba(62,61,64,1.00); font-size: 15px;}
 #header h2 {font-size: 30px;}
 
 #contenu {
+        float: left;
 	background: white;
 	padding-left: 20em;
 	padding-right: 0em;
@@ -78,7 +81,12 @@ li 	{color: rgba(62,61,64,1.00); font-size: 15px;}
 	height: 300px;
 	}
 
+.clear {
+  clear: both;
+}  
+
 .vignette {
+        float: left;
 	margin-right: 2em;
 	background: rgba(233,219,242,1.00);
 	width: 20em;

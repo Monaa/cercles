@@ -27,22 +27,22 @@
 ?>
 
 <h1>Créer un cercle</h1>
-
 <form method="post" action="/index.php?action=add_cercle">
 
   <div class="form-group">   
     <label for="nom">Nom</label>
     <input id="nom" name="nom" class="form-control" />
   </div>    
-  
+
   <div class="form-group">   
-    <label for="id_ville">Ville  </label>
+    <label for="id_ville">Ville</label>
     <select id="id_ville" name="id_ville" class="form-control" >
    
 		 <?php
-              $villes = mysqli_query($mysql, "SELECT id, nom FROM villes");
+  $villes = $db->prepare('SELECT id, nom FROM villes');
+  $villes->execute();
               
-              while ($ville = mysqli_fetch_array($villes)) { 
+              while ($ville = $villes->fetch()) { 
 		 ?> 
               <option value="<?php echo($ville{'id'}); ?>"><?php echo($ville{'nom'}); ?></option>
               <?php }?>
