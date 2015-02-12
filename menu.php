@@ -7,7 +7,7 @@
    ?> 
 
 <ul>
-  <li>Données utilisateur</li>
+  <li>Données utilisateur
     <ul>
 		<li><a  href="/?action=home_identifies">Ma page d'accueil</a></li>    
 		<li><a  href="/?action=mes_cercles">Mes cercles</a></li>

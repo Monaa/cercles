@@ -37,7 +37,7 @@
   
   <div class="form-group">   
     <label for="id_ville">Ville  </label>
-    <select id="id_ville" name="id_ville"class="form-control" >
+    <select id="id_ville" name="id_ville" class="form-control" >
    
 		 <?php
               $villes = mysqli_query($mysql, "SELECT id, nom FROM villes");
@@ -49,8 +49,8 @@
               </select>
   </div>   
   <div class="form-group">   
-    <label for "id_categorie">Catégorie</label></p> 
-    <select id="id_categorie" name="id_categorie"class="form-control" >
+    <label for="id_categorie">Catégorie</label></p> 
+    <select id="id_categorie" name="id_categorie" class="form-control" >
 		 <?php 
               $noms = mysqli_query($mysql, "SELECT id, nom FROM cercles.categories");
               while ($nom = mysqli_fetch_array($noms)) { 
@@ -61,7 +61,7 @@
   
   <div class="form-group">       
     <label for="commentaire">Description</label>
-    <textarea rows="8" cols="50" id="commentaire" name="commentaire"class="form-control" ></textarea>
+    <textarea rows="8" cols="50" id="commentaire" name="commentaire" class="form-control" ></textarea>
   </div>
 
   <div class="form-group">  
