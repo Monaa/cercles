@@ -79,6 +79,7 @@ li 	{color: rgba(62,61,64,1.00); font-size: 15px;}
 	}
 
 .vignette {
+	margin-right: 2em;
 	background: rgba(233,219,242,1.00);
 	width: 20em;
 	border: 4px rgba(233,219,242,1.00);

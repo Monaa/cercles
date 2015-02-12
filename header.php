@@ -18,6 +18,3 @@
     } 
   ?>
 </div>
-<?php vignette($db, 1); ?>
-<?php vignette($db, 3); ?>
-<?php vignette($db, 5); ?>
