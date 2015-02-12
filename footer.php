@@ -6,12 +6,9 @@
 <p><strong>Les catégories  de cercles</strong></p>
 
     <ul>
-      <li>Activtés mauelles</li>
-      <li>Activités artistiques</li>
-      <li>Nature</li>
-      <li>Société</li>
       <li>Sport</li>
-      <li>Santé</li>
-      <li>Famille</li>
-      <li>Autres</li>
+      <li>Vie pratique</li>
+      <li>Nature</li>
+      <li>Famille / enfants</li>
+      <li>loisirs</li>
     </ul>
