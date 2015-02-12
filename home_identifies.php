@@ -9,3 +9,4 @@
 <h2>Dernière  création de cercle près de chez moi</h2>
 <p>[VIGNETTE CERCLE] (10 km)</p>
  
+<?php vignettes_pour_cercles_par_utilisateur($db, $_SESSION['id_utilisateur']); ?>

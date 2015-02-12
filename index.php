@@ -17,6 +17,9 @@
   $dns = 'mysql:host=fr.anco.is;dbname=cercles';
   $db  = new PDO( $dns, $username, $password );
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $db->prepare('SET NAMES utf8')->execute();
+  
+  include('vignettes.php');
 
 
   # On teste la présence d'un pseudo et d'un mdp dans les paramètres du post
@@ -47,7 +50,7 @@
     }
   }
 
-  if ($_GET['action'] == 'deconnexion') {
+  if (isset($_GET['action']) && $_GET['action'] == 'deconnexion') {
     session_unset(); 
     session_destroy();
   }

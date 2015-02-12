@@ -1,10 +1,15 @@
 <div id="menu">
 
+  <?php
+    if (isset($_SESSION['pseudo'])) {
+      echo '<p>' . $_SESSION['pseudo'];
+    }
+   ?> 
 
 <ul>
   <li>Données utilisateur</li>
     <ul>
-		<li><a  href="/?action=home_identifie">Ma page d'accueil</a></li>    
+		<li><a  href="/?action=home_identifies">Ma page d'accueil</a></li>    
 		<li><a  href="/?action=mes_cercles">Mes cercles</a></li>
         <li><a  href="/?action=mon_compte">Mon compte</a></li>
         <li><a  href="/?action=mes_messages">Mes messages</a></li>

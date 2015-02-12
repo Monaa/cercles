@@ -13,22 +13,23 @@
 
           FROM 
             cercles_utilisateurs cu
-	        INNER JOIN cercles c ON cu.id_cercle = c.id  
-			INNER JOIN categories cat ON cat.id = c.id_categorie
+	          INNER JOIN cercles c ON cu.id_cercle = c.id  
+			  INNER JOIN categories cat ON cat.id = c.id_categorie
 		
-		  VALUES
-		    :id_utilisateur, :id_cercle, :nom_cercle, :cat.nom');
-
-
-      $reultat = $req -> fetch (
-	  	while ($c = mysqli_fetch_array($res)) 
+		  WHERE
+		    cu.id_utilisateur = :id_utilisateur');
+	  	
+		$req->execute(array(
+		  ':id_utilisateur' => $_SESSION['id_utilisateur']	
+		));
+		
+		while ($c = $req->fetch()) 
 		{
-		echo("<li>".$c{':nom_cercle'}."</li>")
+			echo("<li>".$c{'nom_cercle'}."</li>");
 		}
-		;)
  
 	
-  $id_utilisateur = 'cu.id_utilisateur';
+ // $id_utilisateur = 'cu.id_utilisateur';
     
 
 	
