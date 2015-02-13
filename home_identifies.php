@@ -1,7 +1,6 @@
 <?php include ('recherche_cercle.php'); ?>
 
 <h2>Mes cercles </h2>
-<?php include ('mes_cercles.php'); ?>
 <?php vignettes_pour_cercles_par_utilisateur($db, $_SESSION['id_utilisateur']); ?>
 
 

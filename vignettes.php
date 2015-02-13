@@ -20,7 +20,7 @@ function vignette($db, $id) {
   	$res .= '<h1><img src="' . $c{'url'} . '"  alt=""/>' . $c{'nom_cercle'} . '</h1>';
   	$res .= '<p></p>';
 	$res .= '<p>' . $c{'commentaire'} . '</p>'; 
-    $res .= '<p>créé le ' . $c{'creation'} . '</p></div>';
+    $res .= '<h2>créé le ' . $c{'creation'} . '</h2></div>';
   }
   
   echo($res);
