@@ -1,3 +1,5 @@
+<h1>Les catégories</h1>
+
 <?php
 
  
@@ -5,16 +7,16 @@
 
   $req->execute();
               
-              while ($req = $req->fetch()) { 
+         while ($cat = $req->fetch()) { 
+			  
 ?> 
             
-            
-<option value=>
-<h1>Les catégories de cercles</h1>
-              <h1><img src="<?php echo($req{'url'}); ?>"</h1>
-			  <?php echo($req{'nom'}); ?></h1>
-              
-</option>
-              <?php }?>
+                             <h2>
+                             <img src="<?php echo($cat{'url'}); ?>" />
+							 <?php echo($cat{'nom'}); ?>
+                             </h2><?php 
+					
+							 
+ }?>
 
 
