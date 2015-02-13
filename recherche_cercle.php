@@ -6,7 +6,7 @@
   
     <div class="form-group">
 		<label for="recherche cercle"></label>
-       <input id="recherche cercle" name)"pseudo" class="form-control" autocomplete="off" value="Saisir la ville, le départemet, la région, le pays" />
+       <input id="recherche cercle" name)"pseudo" class="form-control" autocomplete="off" placeholder="Saisir la ville, le département, la région, le pays" />
        
        
 	</div>

@@ -11,10 +11,10 @@
 			  
 ?> 
             
-                             <h2>
-                             <img src="<?php echo($cat{'url'}); ?>" />
+                             <p>
+                             <?php echo($cat{'url'}); ?>
 							 <?php echo($cat{'nom'}); ?>
-                             </h2><?php 
+                             </p><?php 
 					
 							 
  }?>

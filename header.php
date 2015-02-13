@@ -5,7 +5,7 @@
 
   <?php
     if (isset($_SESSION['pseudo'])) {
-      echo '<p>' . $_SESSION['pseudo'];
+      //echo '<p>' . $_SESSION['pseudo'];
       echo '<a  class="btn btn-default" href="/?action=deconnexion">Déconnexion</a></p>';
     }
     else { 

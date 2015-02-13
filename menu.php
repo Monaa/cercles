@@ -1,11 +1,11 @@
 <div id="menu">
-
-  <?php
+<a href="/?action=home_identifies">
+ <p><img src="images/home.png" alt=""/>  Bonjour  <?php
     if (isset($_SESSION['pseudo'])) {
-      echo '<p>' . $_SESSION['pseudo'];
+      echo  $_SESSION['pseudo'];
     }
    ?> 
-
+</p></a>
 <ul>
   <li>Données utilisateur
     <ul>
