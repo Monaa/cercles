@@ -7,15 +7,6 @@
     $req->execute(array(
       ':id' =>  	$_GET['id_cercle']
     ));
-
-?>
-
-<?php
-  $req = $db->prepare ('
-  			SELECT * FROM cercles where id=3		
-			');
-
-  $req->execute();
               
          while ($ce = $req->fetch()) { 
 ?> 
@@ -45,7 +36,7 @@
   						    <p>Nombre de membres : <?php echo($ce{'COUNT(*)'}); ?></p>
 						  	<h2>Membres du cercle </h2>
 
-  <?php }?>                   		  
+  <?php }}?>                   		  
 							  
 
 <p></p>
