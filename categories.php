@@ -12,7 +12,7 @@
 ?> 
             
                              <p>
-                             <?php echo($cat{'url'}); ?>
+                             <img src="<?php echo($cat{'url'}); ?>" />
 							 <?php echo($cat{'nom'}); ?>
                              </p><?php 
 					
