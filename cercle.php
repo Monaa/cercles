@@ -41,7 +41,7 @@
 
 <p></p>
     
- <p><img src="images/courrier.png"	/>  Inviter des membres</p>
+ <p><img src="images/@.png"	/>  Inviter des membres</p>
  
 <ul>  
     <li>Responsable du cercle </li>
