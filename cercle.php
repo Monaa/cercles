@@ -4,36 +4,50 @@
 <?php
 
  
-  $req = $db->prepare ('SELECT * FROM cercles where id=3');
+  $req = $db->prepare ('
+  			SELECT * FROM cercles where id=3
+			
+			');
 
   $req->execute();
               
          while ($ce = $req->fetch()) { 
 			  
 ?> 
-            
                              <p>
                             <h1> <?php echo($ce{'nom_cercle'}); ?></h1>
   							<h2>[VILLE] - [DEPARTEMENT]</h2>
-
-                            
+                                                        
 							<p>Description </p>
 							<p><?php echo($ce{'commentaire'}); ?>
                             
                             </p>
 							<p>Date de création</p>
 							<p><?php echo($ce{'creation'}); ?>
-                            
-							<p>Nombre de membres : </p>
-							<?php 
-					
-							 
+							<?php 					
  }?>
-							  
-							  
-  </p>
-  <h1><?php echo($ce{'nom_cercle'}); ?></h1>
+				
+  <?php                
+   $req = $db->prepare ('
+			SELECT COUNT(*) FROM cercles
+			INNER JOIN cercles_utilisateurs ON cercles.
+			cercles.id = id_cercle
+         	where id=3			
+			');
 
+  $req->execute();
+              
+         while ($ce = $req->fetch()) { 
+
+?> 
+							
+						  <p>Nombre de membres : <?php echo($ce{'COUNT(*)'}); ?></p>
+
+
+  <?php }?>                   		  
+							  
+ 
+	
 
 
 <p></p>
