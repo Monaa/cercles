@@ -36,11 +36,7 @@
   						    <p>Nombre de membres : <?php echo($ce{'COUNT(*)'}); ?></p>
 						  	<h2>Membres du cercle </h2>
 
-<<<<<<< HEAD
-  <?php }}?>                   		  
-=======
   <?php } }?>                   		  
->>>>>>> 7b64d02f14505b4b82b247ed51b0f139efa79459
 							  
 
 <p></p>
