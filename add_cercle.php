@@ -31,7 +31,7 @@
 
   <div class="form-group">   
     <label for="nom">Nom</label>
-    <input id="nom" name="nom" class="form-control" />
+    <input id="nom" name="nom" class="form-control" maxlength="25"/>
   </div>    
 
   <div class="form-group">   
@@ -61,7 +61,7 @@
   
   <div class="form-group">       
     <label for="commentaire">Description</label>
-    <textarea rows="8" cols="50" id="commentaire" name="commentaire" class="form-control" ></textarea>
+    <textarea rows="8" cols="50" id="commentaire" name="commentaire" class="form-control" maxlength="220"></textarea>
   </div>
 
   <div class="form-group">  

@@ -53,7 +53,7 @@ li {color: rgba(62,61,64,1.00); font-size: 15px;}
 	padding-bottom: 2em;
 	width: 320px;
 	height: 0;
-		text-align: left;
+	text-align: left;
 
 	}
 #menu li {	
@@ -68,7 +68,7 @@ li {color: rgba(62,61,64,1.00); font-size: 15px;}
 	margin-top: 0em;
 	margin-bottom: 0em;
 	height: 100%; 
-		clear: both;
+	clear: both;
 
 	}
 
@@ -83,7 +83,7 @@ li {color: rgba(62,61,64,1.00); font-size: 15px;}
 	margin-top: 0em;
 	margin-bottom: 0em;
 	height: 300px;
-		clear: both;
+	clear: both;
 
 	}
 
@@ -93,14 +93,16 @@ li {color: rgba(62,61,64,1.00); font-size: 15px;}
 
 .vignette {
     float: left;
-	margin-right: 2em;
+	margin-right: 1em;
 	margin-left: 1em;
 	margin-bottom: 1em;
 	margin-top: 0px;
 	padding-top: 0px;
 	padding-left: 1em;
+	padding-right: 1em;
 	background: rgba(233,219,242,1.00);
 	width: 303px;
+	height: 252px;
 	border: 4px rgba(233,219,242,1.00);
     border-radius: 10px 10px 0px 10px;
 	}
